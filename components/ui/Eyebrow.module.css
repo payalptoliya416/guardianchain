@@ -1,0 +1,21 @@
+.eyebrow {
+  display: inline-block;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  line-height: 1;
+}
+
+.dark {
+  color: var(--color-light-100);
+  border-color: var(--color-border-dark);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.light {
+  color: var(--color-blue-500);
+  border-color: var(--color-blue-500);
+  background: rgba(32, 77, 242, 0.06);
+}

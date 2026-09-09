@@ -1,0 +1,30 @@
+.section {
+  background: var(--color-gray-50);
+  padding-top: 96px;
+  padding-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+}
+
+.heading {
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: var(--color-ink-700);
+}
+
+.description {
+  color: var(--color-muted-600);
+  font-size: var(--fs-body-lg);
+  max-width: 46ch;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

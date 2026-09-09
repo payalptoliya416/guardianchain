@@ -1,0 +1,141 @@
+.section {
+  padding-block: 72px;
+}
+
+.white {
+  background: var(--color-white);
+}
+
+.dark {
+  background: var(--color-navy-900);
+}
+
+.blue {
+  background: var(--gradient-blue);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.imageLeft {
+  direction: rtl;
+}
+
+.imageLeft > * {
+  direction: ltr;
+}
+
+.imageCol {
+  background: var(--color-gray-50);
+  padding: 16px;
+}
+
+.dark .imageCol,
+.blue .imageCol {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.imageColAccent {
+  position: relative;
+  padding: 0;
+  background: none;
+}
+
+.imageColAccent::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  right: -24px;
+  bottom: -24px;
+  background: var(--color-blue-500);
+  z-index: 0;
+}
+
+.imageColAccent .image {
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.title {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+.white .title {
+  color: var(--color-ink-900);
+}
+
+.dark .title,
+.blue .title {
+  color: var(--color-white);
+}
+
+.description {
+  font-size: var(--fs-body-lg);
+  max-width: 52ch;
+}
+
+.white .description {
+  color: var(--color-muted-600);
+}
+
+.dark .description,
+.blue .description {
+  color: var(--color-light-300);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.listItem {
+  border: 1px solid var(--color-border-light);
+  border-left: 3px solid var(--color-blue-500);
+  padding: 14px 20px;
+  font-size: var(--fs-small);
+}
+
+.white .listItem {
+  color: var(--color-ink-700);
+}
+
+.dark .listItem,
+.blue .listItem {
+  color: var(--color-light-100);
+  border-color: var(--color-border-dark);
+  border-left: 3px solid var(--color-blue-400);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .imageLeft {
+    direction: ltr;
+  }
+}

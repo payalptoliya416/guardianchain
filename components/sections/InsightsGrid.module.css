@@ -1,0 +1,144 @@
+.section {
+  background: var(--color-navy-900);
+  padding-block: 96px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.heading {
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: var(--color-light-100);
+  margin-top: 20px;
+}
+
+.intro {
+  color: var(--color-light-300);
+  font-size: var(--fs-body-lg);
+}
+
+.category {
+  color: var(--color-blue-400);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.featuredCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  background: var(--color-white);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.featuredImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 6px solid var(--color-blue-500);
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuredTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-ink-900);
+  margin-bottom: 14px;
+}
+
+.description {
+  color: var(--color-muted-600);
+  font-size: var(--fs-body);
+  margin-bottom: 24px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.date {
+  color: var(--color-muted-500);
+  font-size: var(--fs-small);
+}
+
+.readMore {
+  border: 1px solid var(--color-blue-500);
+  color: var(--color-blue-500);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  padding: 10px 18px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.readMore:hover {
+  background: var(--color-blue-500);
+  color: var(--color-white);
+}
+
+.pairGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.tripleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-top: 6px solid var(--color-blue-500);
+}
+
+.cardBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.1875rem;
+  font-weight: 600;
+  color: var(--color-ink-900);
+  margin-bottom: 12px;
+}
+
+.compactCard .description {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header,
+  .featuredCard,
+  .pairGrid,
+  .tripleGrid {
+    grid-template-columns: 1fr;
+  }
+}
