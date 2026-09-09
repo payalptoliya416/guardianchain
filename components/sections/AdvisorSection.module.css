@@ -40,8 +40,9 @@
 .photoWrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 306 / 270;
   margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .photo {
