@@ -48,7 +48,14 @@ export default function AdvisorSection() {
           {ADVISORS.map((advisor) => (
             <div className={styles.card} key={advisor.name}>
               <div className={styles.photoWrap}>
-                <Image src={advisor.image} alt={advisor.name} fill className={styles.photo} sizes="(max-width: 700px) 50vw, 25vw" />
+            <Image
+  src={advisor.image}
+  alt={advisor.name}
+  fill
+  className={styles.photo}
+  sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 25vw"
+  unoptimized
+/>
               </div>
               <h3 className={styles.name}>{advisor.name}</h3>
               <p className={styles.role}>{advisor.role}</p>
